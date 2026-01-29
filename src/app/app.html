@@ -1,10 +1,10 @@
 <h1> {{ title() }}</h1>
+<header> Movie List Alex Fagan S00267631 </header>
 <ul>
   @for (movie of movies(); track movie) {
   <li>
     {{movie}}
-    <button (click)="alertMessage()"> Delete Movie </button>
-   
+    <button (click)="addToFavourites(movie)"> Add to Favourites </button>
   </li>
 } @empty {
   <li> No Movies Found!</li>

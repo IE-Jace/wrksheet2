@@ -23,17 +23,11 @@ export class App {
 
   protected favourites = signal<string[]>([]);
 
-  protected alertMessage()
-  {
-    alert('This is an alert message from the App component!');
-  }
   protected addToFavourites(movie: string) {
-    alert(`Added ${movie} to favourites`);
     this.favourites.update((current) => [...current, movie]);
   }
 
   protected deleteFavourite(index: number) {
-    alert(`Removed favourite at index ${index}`);
     this.favourites.update((current) => current.filter((_, i) => i !== index));
   }
 }
