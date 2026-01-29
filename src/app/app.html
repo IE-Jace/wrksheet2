@@ -1,9 +1,10 @@
 <h1> {{ title() }}</h1>
 <ul>
-  @for (movie of movies; track movie) {
+  @for (movie of movies(); track movie) {
   <li>
     {{movie}}
-    <button (click)="addToFavourites(movie)"> Add to Favourites </button>
+    <button (click)="alertMessage()"> Delete Movie </button>
+   
   </li>
 } @empty {
   <li> No Movies Found!</li>
